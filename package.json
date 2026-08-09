@@ -1,0 +1,62 @@
+{
+  "name": "webgpu-asset-exporter",
+  "version": "0.1.0",
+  "description": "Render WGSL / WebGPU shaders to standard assets: images (PNG/JPEG/WebP/AVIF/GIF/ICO), video (MP4/WebM/OGV/GIF), and audio (WAV/MP3/OGG)",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./image": "./src/image/encode-image.js",
+    "./video": "./src/video/encode-video.js",
+    "./audio": "./src/audio/encode-audio.js"
+  },
+  "files": [
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "webgpu",
+    "wgsl",
+    "shader",
+    "export",
+    "png",
+    "mp4",
+    "wav",
+    "ffmpeg",
+    "sharp",
+    "headless"
+  ],
+  "author": "uut12345qwert-collab",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uut12345qwert-collab/webgpu-wgsl-to-assets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uut12345qwert-collab/webgpu-wgsl-to-assets/issues"
+  },
+  "homepage": "https://github.com/uut12345qwert-collab/webgpu-wgsl-to-assets#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "sharp": ">=0.32.0",
+    "@ffmpeg-installer/ffmpeg": ">=1.1.0",
+    "webgpu": ">=0.1.0"
+  },
+  "peerDependenciesMeta": {
+    "sharp": {
+      "optional": true
+    },
+    "@ffmpeg-installer/ffmpeg": {
+      "optional": true
+    },
+    "webgpu": {
+      "optional": true
+    }
+  }
+}
